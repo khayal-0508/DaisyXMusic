@@ -27,7 +27,7 @@ async def bye(client, message):
     if message.from_user.id in SUDO_USERS:
         lol = await message.reply("Starting Gcast")
         if not message.reply_to_message:
-            await lol.edit("Reply to any text message to gcast sir")
+            await lol.edit("Hər hansı mətn mesajına cavab verin")
             return
         msg = message.reply_to_message.text
         async for dialog in client.iter_dialogs():
