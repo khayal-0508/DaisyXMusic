@@ -30,15 +30,15 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➕ Mənib qrupunuza əlavə edin 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "📲 Rəsmi kanal", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "💬 Rəsmi qrup", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        "Sahibim🤵🏻", url=f"https://t.me/tag1y3v")
                 ]
             ]
         ),
@@ -48,12 +48,12 @@ def _start(client, message):
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**🔴 {PROJECT_NAME} is online**""",
+        f"""**🔴 {PROJECT_NAME} aktivdir**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "💬 Reklam və iş birliyi üçün", url=f"https://t.me/tag1y3v"
                     )
                 ]
             ]
@@ -93,10 +93,10 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("➕ Add me to your Group 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '📲 Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
+            [InlineKeyboardButton("➕ Məni qrupunuza əlavə edin 🙋‍♀️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '📲 Rəsmi kanal', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '💬 Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton(text = 'Sahibim🤵🏻', url=f"https://t.me/tag1y3v")],
             [InlineKeyboardButton(text = '◀️', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -111,12 +111,12 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**🙋‍♀️ Salam, əziz istifadəçi!. Mən qrupunuzun səsli söhbətində musiqi dinləməyiniz üçün @tag1y3v tərəfindən yaradılmış bir botam**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🟡 Click here for help 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
+                        "🟡 Əlavə məlumat üçün klikləyin 🟡", url=f"https://t.me/{BOT_USERNAME}?start"
                     )
                 ]
             ]
