@@ -31,26 +31,26 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
+            "<b>İlk olaraq məni qrupda admin edin</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "Khan Music Bot"
 
     try:
         await USER.join_chat(invitelink)
-        await USER.send_message(message.chat.id, "I joined here as you requested")
+        await USER.send_message(message.chat.id, "Tələbinizə uyğun olaraq qrupa qatıldım")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>Assistant qrupunuza qoşuldu</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
+            f"<b>🛑 Flood Wait Xətası 🛑 \n Əziz {user.first_name} couldn't join your group due to heavy join requests for userbot! Assistantın qrupda çıxarılmadığına(ban olunmadığına) əmin olun."
             "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
         )
         return
