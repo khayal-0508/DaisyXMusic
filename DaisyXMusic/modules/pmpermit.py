@@ -33,7 +33,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Hi there, This is a music assistant service .\n\n ❗️ Rules:\n   - No chatting allowed\n   - No spam allowed \n\n 👉 **SEND GROUP INVITE LINK OR USERNAME IF USERBOT CAN'T JOIN YOUR GROUP.**\n\n ⚠️ Disclamer: If you are sending a message here it means admin will see your message and join chat\n    - Don't add this user to secret groups.\n   - Don't Share private info here\n\n",
+                "Salam. Bura @Khan_MusicBot -un servisidir. .\n\n ❗️ Qaydalar:\n   - Söhbətə icazə verilmir\n   - Spama icazə verilmir \n\n 👉 **Bir çətinliklə üzləşdiyiniz halda @tag1y3v ilə əlaqə qurun.**\n\n",
             )
             return
 
@@ -47,11 +47,11 @@ async def bye(client: Client, message: Message):
         queryy = text[1]
         if queryy == "on":
             PMSET = True
-            await message.reply_text("Pmpermit turned on")
+            await message.reply_text("Pmpermit aktivləşdirildi")
             return
         if queryy == "off":
             PMSET = None
-            await message.reply_text("Pmpermit turned off")
+            await message.reply_text("Pmpermit deaktiv edildi")
             return
 
 @USER.on_message(filters.text & filters.private & filters.me)        
