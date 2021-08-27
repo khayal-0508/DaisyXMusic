@@ -641,7 +641,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="Close 🛑", callback_data="cls")],
+                    [InlineKeyboardButton(text="Bağla 🛑", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -733,7 +733,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **İcra edilir**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -758,17 +758,17 @@ async def ytplay(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "<b>Add me as admin of yor group first</b>",
+                        "<b>Məni qrupda admin edin</b>",
                     )
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "I joined this group for playing music in VC"
+                        message.chat.id, "Səsli söhbəydə musiqi dinləməyiniz üçün qrupa qoşuldum"
                     )
                     await lel.edit(
-                        "<b>helper userbot joined your chat</b>",
+                        "<b>@KhanMusicAssistant qrup uğurla qoşuldu</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -776,8 +776,8 @@ async def ytplay(_, message: Message):
                 except Exception:
                     # print(e)
                     await lel.edit(
-                        f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add assistant to your Group and try again</b>",
+                        f"<b>🔴 Flood Wait Xətası 🔴 \nƏziz {user.first_name} assistant sizdən asılı olan səbəblərə görə qrupa qoşula bilmədi! Assistantın qrupdan çıxarılmadığını(ban olunmadığını) yoxlayın."
+                        "\n\nvə ya @KhanMusicAssistant -ı əl ilə əlavə edin</b>",
                     )
     try:
         await USER.get_chat(chid)
