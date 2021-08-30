@@ -1,12 +1,16 @@
-{
+{{
   "name": "DaisyXMusic",
+  "logo": "https://telegra.ph/file/36ff1b571aa11df5812de.jpg",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/khayal-05058/DaisyXMusic",
-  "stack": "container",
+  "repository": "https://github.com/TeamDaisyX/DaisyXMusic",
+  "stack": "heroku-20",
   "buildpacks": [
    {
      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+   },
+   {
+     "url": "heroku/python"
    }   
   ],        
   "env": {
@@ -17,52 +21,48 @@
     "BOT_TOKEN": {
       "description": "A bot token from @BotFather",
       "required": true
-      "value": "1780504797:AAE7R4gv0S44SJd0bI_BZFwt7GSfUHkhcag"
     },
     "BOT_USERNAME": {
       "description": "Your bot's username without @",
       "required": true
-      "value": "Khan_MusicBot"
     },
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
-      "required": true,
-      "value": "Khan Music Bot"
+      "required": false,
+      "value": ""
     },
     "SUPPORT_GROUP": {
       "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
-      "required": true,
-      "value": "KhanChat"
+      "required": false,
+      "value": "DaisySupport_Official"
     },
     "PROJECT_NAME": {
       "description": "Your MusicPlayer project Name.",
       "required": false,
-      "value": "Khan Music Bot"
+      "value": "DaisyXMusic v5"
     },
     "ASSISTANT_NAME": {
       "description": "Your MusicPlayer's assistant Username without @.",
-      "required": true,
-      "value": "KhanMusicAssistant"
+      "required": true
     },
     "ARQ_API_KEY": {
       "description": "Get from @ARQRobot.",
       "required": false,
-      "value": "VKSSQH-SRNJYZ-MSOJAI-QALESR-ARQ"
+      "value": ""
     },    
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": " https://telegra.ph/file/dc0ed0f59cebc38749528.png"
+      "value": " https://telegra.ph/file/dcfdf612e499eef0e0b1f.png"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel without @ [Leave this if you don't have one].",
       "required": false,
-      "value": "KhanVlog"
+      "value": "DaisyXupdates"
     },    
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
       "required": true
-      "value": "4453240"
     },
     "PMPERMIT": {
       "description": "Change to turn off",
@@ -76,7 +76,6 @@
     "SUDO_USERS": {
       "description": "List of user IDs counted as admin everywhere (separated by space).",
       "required": true
-      "value": "1708421347"
     },
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
