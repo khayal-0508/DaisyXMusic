@@ -2,7 +2,7 @@
   "name": "DaisyXMusic",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/TeamofDaisyX/DaisyXMusic",
+  "repository": "https://github.com/khayal-05058/DaisyXMusic",
   "stack": "container",
   "buildpacks": [
    {
@@ -17,29 +17,32 @@
     "BOT_TOKEN": {
       "description": "A bot token from @BotFather",
       "required": true
+      "value": "1780504797:AAE7R4gv0S44SJd0bI_BZFwt7GSfUHkhcag"
     },
     "BOT_USERNAME": {
       "description": "Your bot's username without @",
       "required": true
+      "value": "Khan_MusicBot"
     },
     "BOT_NAME": {
       "description": "Your MusicPlayer Bot Name.",
-      "required": false,
-      "value": ""
+      "required": true,
+      "value": "Khan Music Bot"
     },
     "SUPPORT_GROUP": {
       "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
-      "required": false,
-      "value": "DaisySupport_Official"
+      "required": true,
+      "value": "KhanChat"
     },
     "PROJECT_NAME": {
       "description": "Your MusicPlayer project Name.",
       "required": false,
-      "value": "DaisyXMusic v4"
+      "value": "Khan Music Bot"
     },
     "ASSISTANT_NAME": {
       "description": "Your MusicPlayer's assistant Username without @.",
-      "required": true
+      "required": true,
+      "value": "KhanMusicAssistant"
     },
     "ARQ_API_KEY": {
       "description": "Get from @ARQRobot.",
@@ -49,16 +52,17 @@
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": " https://telegra.ph/file/dcfdf612e499eef0e0b1f.png"
+      "value": " https://telegra.ph/file/dc0ed0f59cebc38749528.png"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel without @ [Leave this if you don't have one].",
       "required": false,
-      "value": "DaisyXupdates"
+      "value": "KhanVlog"
     },    
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
       "required": true
+      "value": "4453240"
     },
     "PMPERMIT": {
       "description": "Change to turn off",
@@ -72,6 +76,7 @@
     "SUDO_USERS": {
       "description": "List of user IDs counted as admin everywhere (separated by space).",
       "required": true
+      "value": "1708421347"
     },
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
